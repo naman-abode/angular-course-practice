@@ -1,0 +1,7 @@
+.todo {
+  cursor: pointer
+}
+
+.todo.active {
+  text-decoration: line-through;
+}

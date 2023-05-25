@@ -1,0 +1,13 @@
+<form action="post" (submit)="insertTodo()">
+  <input type="text" name="textTodo" [(ngModel)]="inputTodo">
+  <button type="submit">Envoyer</button>
+</form>
+
+
+<ul>
+  <li class="todo"
+  [class.active]="todo.done"
+  (click)="onSelectTodo($event, todo)"
+  *ngFor="let todo of todos">
+  {{ todo.text }} <button (click)="sendTodoToParent($event, todo)">Détails</button></li>
+</ul>
